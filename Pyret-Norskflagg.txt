@@ -1,0 +1,14 @@
+Red = rectangle(352, 256, "solid", "red")
+Blue1 = rectangle(352, 32, "solid", "darkblue")
+Blue2 = rectangle(32, 256, "solid", "darkblue")
+White1 = rectangle(352, 64, "solid", "white")
+White2 = rectangle(64, 256, "solid", "white")
+
+Norway =
+  put-image(Blue1, 176, 128,
+    put-image(Blue2, 128, 128,
+      put-image(White1, 176, 128,
+        put-image(White2, 128, 128,
+          Red))))
+
+Norway
