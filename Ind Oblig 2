@@ -1,0 +1,63 @@
+include shared-gdrive(
+  "dcic-2021",
+  "1wyQZj_L0qqV9Ekgr9au6RX2iqt2Ga8Ep")
+include gdrive-sheets
+include data-source
+ssid = "1RYN0i4Zx_UETVuYacgaGfnFcv4l9zd9toQTTdkQkj7g"
+kWh-wealthy-consumer-data =
+load-table: komponent, energi
+    source: load-spreadsheet(ssid).sheet-by-name("kWh", true)
+    sanitize energi using string-sanitizer
+end
+
+
+
+#Her definerer jeg verdiene for distance-travelled-per-day, distance-per-unit-of-fuel, energy-per-unit-of-fuel, som ble gitt til meg fra oppgaven
+
+distance-travelled-per-day = 48
+distance-per-unit-of-fuel = 8
+energy-per-unit-of-fuel = 10
+
+
+
+#Her regner jeg ut hva verdien til energy-per-day blir utifra en formel som jeg fikk av oppgaven
+
+energy-per-day = ( distance-travelled-per-day / 
+                            distance-per-unit-of-fuel ) * 
+                                        energy-per-unit-of-fuel
+energy-per-day
+
+
+
+#Her bruker jeg en funksjon for at String skal bli til tall som jeg har fått utifra oppgavene tidlige
+
+fun energi-to-number(str :: String) -> Number:
+  cases(Option) string-to-number(str):
+    | some(a) => a
+    | none => energy-per-day
+  end
+where:
+  energi-to-number("") is energy-per-day
+energi-to-number("48") is 48
+end
+
+energi-tabell = transform-column(kWh-wealthy-consumer-data, "energi", energi-to-number)
+
+energi-tabell
+
+#Her så har jeg laget en funksjon med som vil regne og vise det gjennomsnittlige forburket per innbygger i kWh
+
+Energiforbruk = sum(energi-tabell, "energi")
+
+fun Gjennomsnitt():
+  block:
+    average = Energiforbruk + energy-per-day
+    print("Det gjennomsnittlig forbruket per innbygger i kWh er") 
+    average
+    end
+end
+
+Gjennomsnitt()
+
+
+bar-chart(energi-tabell, "komponent", "energi")
