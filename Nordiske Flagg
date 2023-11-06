@@ -1,0 +1,75 @@
+NO-Red = rectangle(352, 256, "solid", "crimson")
+NO-Blue1 = rectangle(352, 32, "solid", "Midnight blue")
+NO-Blue2 = rectangle(32, 256, "solid", "Midnight blue")
+NO-White1 = rectangle(352, 64, "solid", "white")
+NO-White2 = rectangle(64, 256, "solid", "white")
+
+Norway =
+  put-image(NO-Blue1, 176, 128,
+    put-image(NO-Blue2, 128, 128,
+      put-image(NO-White1, 176, 128,
+        put-image(NO-White2, 128, 128,
+          NO-Red))))
+
+Norway
+
+
+FI-White = rectangle(360, 220, "solid", "white")
+FI-Blue1 = rectangle(360, 60, "solid", "midnight blue")
+FI-Blue2 = rectangle(60, 220, "solid", "midnight blue")
+
+Finland=
+  put-image(FI-Blue1, 180, 110,
+    put-image(FI-Blue2, 140, 110,
+      FI-White))
+Finland
+
+
+DA-RED = rectangle(333, 252, "solid", "Crimson")
+DA-White1 = rectangle(333, 36, "solid", "White")
+DA-White2 = rectangle(36, 252, "solid", "White")
+
+Danmark=
+  put-image(DA-White1, 166.5, 126,
+    put-image(DA-White2, 126, 126,
+      DA-RED))
+Danmark
+
+SV-Blue = rectangle(352, 220, "solid", "Steel blue")
+SV-Gold1 = rectangle(352, 44, "solid", "Gold")
+SV-Gold2 = rectangle(44, 220, "solid", "Gold")
+
+Svergie=
+  put-image(SV-Gold1, 176, 110,
+    put-image(SV-Gold2, 132, 110,
+      SV-Blue))
+Svergie
+
+IS-Red = rectangle(350, 252, "solid", "Navy")
+IS-Blue1 = rectangle(350, 32, "solid", "Fire Brick")
+IS-Blue2 = rectangle(32, 256, "solid", "Fire Brick")
+IS-White1 = rectangle(352, 64, "solid", "white")
+IS-White2 = rectangle(64, 256, "solid", "white")
+
+Island =
+  put-image(IS-Blue1, 175, 128,
+    put-image(IS-Blue2, 128, 128,
+      put-image(IS-White1, 176, 128,
+        put-image(IS-White2, 128, 128,
+          IS-Red))))
+Island
+
+FR-White = rectangle(360, 270, "solid", "White")
+FR-Red1 = rectangle(360, 30, "solid", "Red")
+FR-Red2 = rectangle(30, 270, "solid", "Red")
+FR-Navy1 = rectangle(360, 60, "solid", "Navy")
+FR-Navy2 = rectangle(60, 270, "solid", "Navy")
+
+Faroyene =
+  put-image(FR-Red1, 180, 135,
+    put-image(FR-Red2, 135, 135,
+      put-image(FR-Navy1, 180, 135,
+        put-image(FR-Navy2, 135, 135,
+          FR-White))))
+
+Faroyene
