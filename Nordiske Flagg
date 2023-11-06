@@ -1,18 +1,23 @@
+#Denne delen så definerer jeg hvor bred og høy hver del(Rectangle) skal være slik at at det passer flagget. Jeg har målt forholdet til de ekte flaggene slik målene til hver del(rectangle) har lik forhold og proposjon som de ekte flaggene. Jeg definerer også hvilke farge delene skal ha, men siden "3.18.2 Predefined colors" ikke har helt spesefikt like farger som noen flagg ,så har jeg funnet det nærmeste jeg fant.
+
+#"NO-Red" skal beskrive Flagget(NO = Norge), og fargen(Red) til den delen i flagget.
+
 NO-Red = rectangle(352, 256, "solid", "crimson")
 NO-Blue1 = rectangle(352, 32, "solid", "Midnight blue")
 NO-Blue2 = rectangle(32, 256, "solid", "Midnight blue")
 NO-White1 = rectangle(352, 64, "solid", "white")
 NO-White2 = rectangle(64, 256, "solid", "white")
 
-Norway =
+#Her viser jeg hvor delene skal ligge på flagget, altså posisjonene deres. 
+
+Norge =
   put-image(NO-Blue1, 176, 128,
     put-image(NO-Blue2, 128, 128,
       put-image(NO-White1, 176, 128,
         put-image(NO-White2, 128, 128,
           NO-Red))))
 
-Norway
-
+#Nå gjør jeg det samme med alle flaggene.
 
 FI-White = rectangle(360, 220, "solid", "white")
 FI-Blue1 = rectangle(360, 60, "solid", "midnight blue")
@@ -22,7 +27,7 @@ Finland=
   put-image(FI-Blue1, 180, 110,
     put-image(FI-Blue2, 140, 110,
       FI-White))
-Finland
+
 
 
 DA-RED = rectangle(333, 252, "solid", "Crimson")
@@ -33,7 +38,8 @@ Danmark=
   put-image(DA-White1, 166.5, 126,
     put-image(DA-White2, 126, 126,
       DA-RED))
-Danmark
+
+
 
 SV-Blue = rectangle(352, 220, "solid", "Steel blue")
 SV-Gold1 = rectangle(352, 44, "solid", "Gold")
@@ -43,33 +49,42 @@ Svergie=
   put-image(SV-Gold1, 176, 110,
     put-image(SV-Gold2, 132, 110,
       SV-Blue))
-Svergie
 
-IS-Red = rectangle(350, 252, "solid", "Navy")
-IS-Blue1 = rectangle(350, 32, "solid", "Fire Brick")
-IS-Blue2 = rectangle(32, 256, "solid", "Fire Brick")
+
+
+IS-Blue = rectangle(350, 252, "solid", "Navy")
+IS-Red1 = rectangle(350, 32, "solid", "Fire Brick")
+IS-Red2 = rectangle(32, 256, "solid", "Fire Brick")
 IS-White1 = rectangle(352, 64, "solid", "white")
 IS-White2 = rectangle(64, 256, "solid", "white")
 
 Island =
-  put-image(IS-Blue1, 175, 128,
-    put-image(IS-Blue2, 128, 128,
+  put-image(IS-Red1, 175, 128,
+    put-image(IS-Red2, 128, 128,
       put-image(IS-White1, 176, 128,
         put-image(IS-White2, 128, 128,
-          IS-Red))))
-Island
+          IS-Blue))))
+
+
 
 FR-White = rectangle(360, 270, "solid", "White")
 FR-Red1 = rectangle(360, 30, "solid", "Red")
 FR-Red2 = rectangle(30, 270, "solid", "Red")
-FR-Navy1 = rectangle(360, 60, "solid", "Navy")
-FR-Navy2 = rectangle(60, 270, "solid", "Navy")
+FR-Blue1 = rectangle(360, 60, "solid", "Navy")
+FR-Blue2 = rectangle(60, 270, "solid", "Navy")
 
 Faroyene =
   put-image(FR-Red1, 180, 135,
     put-image(FR-Red2, 135, 135,
-      put-image(FR-Navy1, 180, 135,
-        put-image(FR-Navy2, 135, 135,
+      put-image(FR-Blue1, 180, 135,
+        put-image(FR-Blue2, 135, 135,
           FR-White))))
 
+#Her skriver jeg bare navnet til alle landene slik at de kommer opp
+
+Norge
+Finland
+Danmark
+Svergie
+Island
 Faroyene
