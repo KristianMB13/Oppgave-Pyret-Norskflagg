@@ -1,4 +1,6 @@
-#Denne delen så definerer jeg hvor bred og høy hver del(Rectangle) skal være slik at at det passer flagget. Jeg har målt forholdet til de ekte flaggene slik målene til hver del(rectangle) har lik forhold og proposjon som de ekte flaggene. Jeg definerer også hvilke farge delene skal ha, men siden "3.18.2 Predefined colors" ikke har helt spesefikt like farger som noen flagg ,så har jeg funnet det nærmeste jeg fant.
+#Denne delen så definerer jeg hvor bred og høy hver del(Rectangle) skal være slik at at det passer flagget. 
+#Jeg har målt forholdet til de ekte flaggene slik målene til hver del(rectangle) har lik forhold og proposjon som de ekte flaggene. 
+#Jeg definerer også hvilke farge delene skal ha, men siden "3.18.2 Predefined colors" ikke har helt spesefikt like farger som noen flagg ,så har jeg funnet det nærmeste jeg fant.
 
 #"NO-Red" skal beskrive Flagget(NO = Norge), og fargen(Red) til den delen i flagget.
 
